@@ -158,7 +158,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!136 &290733900
 CapsuleCollider:
@@ -232,7 +232,7 @@ Transform:
   m_GameObject: {fileID: 290733898}
   m_LocalRotation: {x: -0, y: -0.0048624957, z: -0, w: 0.99998826}
   m_LocalPosition: {x: -0.31, y: 0.59, z: 5.58}
-  m_LocalScale: {x: 1.0486108, y: 1.0483702, z: 1.0876}
+  m_LocalScale: {x: 1.0486108, y: 1.0483702, z: 1.0876002}
   m_Children:
   - {fileID: 963194228}
   m_Father: {fileID: 0}
@@ -250,6 +250,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 682a42a1ab5fd6e418e409576bfc34db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerSpeed: 0
+  sprintSpeed: 4
+  walkSpeed: 0.1
+  mouseSensitivity: 2
+  jumpHeight: 5
 --- !u!1 &305104974
 GameObject:
   m_ObjectHideFlags: 0
@@ -533,6 +538,7 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
+  - component: {fileID: 963194229}
   m_Layer: 0
   m_Name: PlayerCamera
   m_TagString: MainCamera
@@ -598,10 +604,22 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.7, z: -0.06}
-  m_LocalScale: {x: 0.9536426, y: 0.9538614, z: 0.91945565}
+  m_LocalRotation: {x: -0.031805214, y: -0.0030411775, z: 0.0004531209, w: 0.99948937}
+  m_LocalPosition: {x: 0, y: 0.7, z: -0.059999865}
+  m_LocalScale: {x: 0.9536426, y: 0.9538614, z: 0.9194554}
   m_Children: []
   m_Father: {fileID: 290733903}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -3.645, y: -0.351, z: 0.063}
+--- !u!114 &963194229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03fca0ef9036b3f4dada457435b6e4fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
